@@ -1,0 +1,4 @@
+printWidth: 3000
+tabWidth: 4
+singleQuote: true
+semi: false
