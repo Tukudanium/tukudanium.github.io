@@ -1,16 +1,18 @@
 <template>
-    <div class="justify-center items-center mt-16 flex w-full h-full">
-        <div class="h-800">
-            <img src="../assets/image/logo.png" class="" />
+    <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
+        <div>
+            <profile-card :icon-image-path="'/src/assets/image/icon.jpg'"></profile-card>
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { ref } from 'vue'
+import profileCard from '../components/tailblocks/profileCard.vue'
 
 export default {
     name: 'ProfilePage',
+    components: { profileCard },
     setup() {
         const msg = ref('hello')
 
@@ -26,4 +28,16 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.delScroll {
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+}
+
+/*Google Chrome、Safariへの対応*/
+.delScroll::-webkit-scrollbar {
+    display: none;
+}
+</style>
