@@ -3,7 +3,7 @@
         <div class="h-2/5 flex">
             <div class="h-full w-2/5 checker-bg items-center justify-center p-5 text-blue-500">
                 <div class="checker-bg flex items-center justify-center rounded-lg">
-                    <img class="w-28 h-28 bg-gray-100 bg-cover bg-center rounded-lg" :src="imagePath" />
+                    <img class="w-28 h-28 bg-gray-100 bg-cover bg-center rounded-lg" :src="requiredUrl(imagePath)" />
                 </div>
             </div>
             <div class="py-5 pr-5 w-3/5">
@@ -50,8 +50,10 @@ export default {
         },
     },
     setup(props: any) {
-        console.log(props.summarys)
-        return {}
+        const requiredUrl = (fileName: string): string => {
+            return new URL(`../../assets/image/${fileName}.png`, import.meta.url).href
+        }
+        return { requiredUrl }
     },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
         <div>
-            <portfolio-card :image-path="'/src/assets/image/dotArt.png'" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
+            <portfolio-card :image-path="'dotArt'" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
         </div>
     </div>
 </template>
