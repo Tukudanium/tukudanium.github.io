@@ -1,7 +1,7 @@
 <template>
     <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
         <div>
-            <profile-card :icon-image-path="'/src/assets/image/icon.jpg'"></profile-card>
+            <profile-card :icon-image-path="requiredUrl('icon')"></profile-card>
         </div>
     </div>
 </template>
@@ -19,10 +19,14 @@ export default {
         const changeMsg = () => {
             msg.value = 'world'
         }
+        const requiredUrl = (fileName: string): string => {
+            return new URL(`../assets/image/${fileName}.jpg`, import.meta.url).href
+        }
 
         return {
             msg,
             changeMsg,
+            requiredUrl,
         }
     },
 }

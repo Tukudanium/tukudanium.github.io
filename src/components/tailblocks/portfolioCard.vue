@@ -50,10 +50,7 @@ export default {
         },
     },
     setup(props: any) {
-        const requiredUrl = (fileName: string): string => {
-            return new URL(`../../assets/image/${fileName}.png`, import.meta.url).href
-        }
-        return { requiredUrl }
+        return {}
     },
 }
 </script>
