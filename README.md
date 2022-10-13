@@ -51,7 +51,7 @@ const router = createRouter({
 
 ```bash
 const requiredUrl = (fileName: string): string => {
-return new URL(`../../assets/image/${fileName}.png`, import.meta.url).href
+return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
 }
 // パス指定は呼んでいるファイルに合わせて設定
 ```
@@ -63,3 +63,5 @@ return new URL(`../../assets/image/${fileName}.png`, import.meta.url).href
 ```
 
 こう。
+コンポーネントでURLを生成すると何故かダメだったので、ファイルの階層が深いとダメっぽい？
+コンポーネント内で画像ファイル等を使いたいときはrequiredUrl(fileName)で出来たURLをpropsに渡せばよい。
