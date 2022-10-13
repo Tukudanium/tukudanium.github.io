@@ -20,7 +20,7 @@ export default {
             msg.value = 'world'
         }
         const requiredUrl = (fileName: string): string => {
-            return new URL(`../assets/image/${fileName}.jpg`, import.meta.url).href
+            return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
         }
 
         return {
