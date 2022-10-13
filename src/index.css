@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'PixelMplus12';
+    src: url('../src/assets/font/PixelMplus12-Bold.ttf') format('truetype');
+}
+
+.bg-grayblack{
+    background-color: #525252;
+}
