@@ -1,7 +1,7 @@
 <template>
     <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
         <div>
-            <portfolio-card :image-path="'dotArt'" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
+            <portfolio-card :image-path="requiredUrl('dotArt')" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
         </div>
     </div>
 </template>
@@ -30,11 +30,15 @@ export default {
                 url: 'https://dotart.riml.work/',
             },
         ]
+        const requiredUrl = (fileName: string): string => {
+            return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
+        }
         return {
             msg,
             dotArtSummary,
             dotArtLinks,
             changeMsg,
+            requiredUrl,
         }
     },
 }
