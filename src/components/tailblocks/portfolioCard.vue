@@ -49,7 +49,7 @@ export default {
             default: () => [],
         },
     },
-    setup(props) {
+    setup(props: any) {
         console.log(props.summarys)
         return {}
     },
