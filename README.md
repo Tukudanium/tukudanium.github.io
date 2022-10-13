@@ -13,7 +13,8 @@ Vue 3 と Tailwind CSS の学習、またViteを利用してみるという目�
 \
 vite.config
 
-```export default defineConfig({
+```bash
+export default defineConfig({
     base: '/（リポジトリの名前）/', //追記
     build: {
         outDir: 'docs',　 //追記
@@ -25,7 +26,8 @@ vite.config
 
 router/index.ts
 
-```const router = createRouter({
+```bash
+const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL), //追記
   routes,
 });
@@ -33,3 +35,31 @@ router/index.ts
 
 ページ遷移の際は\<router-link\>タグを利用。また、遷移先に/（リポジトリの名前）を追加しておく。
 また、そのままデプロイしてもページとして機能しないので、yarn buildでビルドしてからビルドファイルをpagesのBranchで指定する。
+
+\
+**v-vindでのasset内のファイルへのパス指定**
+\
+画像のsrc等にprops等の変数で動的に値を渡したいとき、そのままv-vindを利用して
+
+```bash
+<img :src="imagePath" />
+```
+
+という形で直接変数を入れても動かない。src要素を静的に指定した場合は内部でWebpackのfile-loaderで画像をモジュールとして読み込むが、動的に指定した場合はそのままパスとして扱われてしまう。
+普通require(imagePath)でモジュールとして読み込めば使えるが、Viteはブラウザのみで実行されるのでNode.js等向けのrequireは定義されていない。
+なので
+
+```bash
+const requiredUrl = (fileName: string): string => {
+return new URL(`../../assets/image/${fileName}.png`, import.meta.url).href
+}
+// パス指定は呼んでいるファイルに合わせて設定
+```
+
+こうして
+
+```bash
+<img :src="requiredUrl(fileName)" />
+```
+
+こう。
