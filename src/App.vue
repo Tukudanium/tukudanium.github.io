@@ -1,6 +1,6 @@
 <template>
     <div class="h-full flex flex-col">
-        <TailblocksHeader />
+        <tailblocks-header />
         <transition name="router-transition" enter-active-class="animated zoomIn">
             <router-view />
         </transition>
@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import { ref } from 'vue'
-import TailblocksHeader from './components/tailblocks/header.vue'
+import tailblocksHeader from './components/tailblocks/header.vue'
 
 export default {
     name: 'App',
     components: {
-        TailblocksHeader,
+        tailblocksHeader,
     },
     setup() {
         const msg = ref('hello')
