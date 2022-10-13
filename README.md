@@ -65,3 +65,4 @@ return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
 こう。
 コンポーネントでURLを生成すると何故かダメだったので、ファイルの階層が深いとダメっぽい？
 コンポーネント内で画像ファイル等を使いたいときはrequiredUrl(fileName)で出来たURLをpropsに渡せばよい。
+追記：なんかjpgだとダメだった。
