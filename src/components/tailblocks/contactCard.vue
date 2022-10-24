@@ -27,17 +27,17 @@ const textToClipBoard = (text: string, ref: HTMLImageElement | undefined) => {
             <h1 class="text-gray-900 font-medium text-lg">アカウント</h1>
             <div class="flex items-center justify-center">
                 <div class="checker-bg flex items-center justify-center m-4">
-                    <a href="https://twitter.com/tukudanium">
+                    <a href="https://twitter.com/tukudanium" target="_blank">
                         <img class="w-12 h-12 rounded-full bg-cover bg-center" :src="requiredUrl('twitterBlue')" />
                     </a>
                 </div>
                 <div class="checker-bg flex items-center justify-center m-4 cursor-pointer" @click="textToClipBoard('つくだに#2366', discodeBalloon)">
                     <img class="w-12 h-12 rounded-full bg-cover bg-center relative" :src="requiredUrl('discode')" />
-                    <span ref="discodeBalloon" class="balloon absolute bg-blue-500 text-blue-100 px-4 py-2 rounded-full"> Discodeのユーザー名をコピーしました。 </span>
+                    <span ref="discodeBalloon" class="balloon absolute bg-blue-500 text-blue-100 px-4 py-2 rounded-full">Discodeのユーザー名をコピーしました。</span>
                 </div>
                 <div class="checker-bg flex items-center justify-center m-4 cursor-pointer" @click="textToClipBoard('985401011', steamBalloon)">
                     <img class="w-12 h-12 rounded-full bg-cover bg-center" :src="requiredUrl('steam')" />
-                    <span ref="steamBalloon" class="balloon absolute bg-blue-500 text-blue-100 px-4 py-2 rounded-full"> Steamのフレンドコードをコピーしました。 </span>
+                    <span ref="steamBalloon" class="balloon absolute bg-blue-500 text-blue-100 px-4 py-2 rounded-full">Steamのフレンドコードをコピーしました。</span>
                 </div>
             </div>
         </div>

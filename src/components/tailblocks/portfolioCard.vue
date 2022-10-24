@@ -42,7 +42,7 @@ const props = defineProps({
             </div>
             <div class="h-1/4 text-left p-5 py-1 border-t border-gray-400">
                 <div v-for="link in links" :key="link.text">
-                    <a :href="link.url" class="text-indigo-600 text-sm no-underline hover:underline ...">{{ link.text }}</a>
+                    <a :href="link.url" target="_blank" class="text-indigo-600 text-sm no-underline hover:underline ...">{{ link.text }}</a>
                 </div>
             </div>
         </div>
