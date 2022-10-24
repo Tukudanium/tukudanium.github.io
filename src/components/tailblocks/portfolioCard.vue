@@ -23,7 +23,7 @@ const props = defineProps({
 <template>
     <div class="w-96 h-96 my-6 mx-4 bg-gray-300 shadow rounded border border-transparent">
         <div class="h-2/5 flex">
-            <div class="h-full w-36 checker-bg items-center justify-center p-5 text-blue-500">
+            <div class="h-full w-36 checker-bg items-center justify-center p-5">
                 <div class="w-28 h-28 checker-bg flex items-center justify-center rounded-lg">
                     <img class="w-28 h-28 bg-gray-100 bg-cover bg-center rounded-lg" :src="imagePath" />
                 </div>

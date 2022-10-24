@@ -8,9 +8,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="w-80 my-6 bg-gray-300 shadow rounded border border-transparent hover:border-blue-500">
-        <div class="h-60 w-full checker-bg items-center justify-center p-4 text-blue-500">
-            <div class="w-full checker-bg flex items-center justify-center p-4 text-blue-500">
+    <div class="w-80 my-6 bg-gray-300 shadow rounded border border-transparent">
+        <div class="h-60 w-full checker-bg items-center justify-center p-4">
+            <div class="checker-bg flex items-center justify-center m-4">
                 <img class="w-32 h-32 bg-gray-100 rounded-full bg-cover bg-center" :src="iconImagePath" />
             </div>
             <h1 class="text-gray-900 font-medium text-lg">佐川 仁庸</h1>
