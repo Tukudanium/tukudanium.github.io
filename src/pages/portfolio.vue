@@ -4,7 +4,7 @@ import portfolioCard from '../components/tailblocks/portfolioCard.vue'
 import { Link } from '../types/link'
 import { useRequiredUrl } from '../composable/useRequiredUrl'
 
-const dotArtSummary: string[] = ['「誰でも気軽に、どこでもドット絵を描けるWEBアプリ」が目標。', '今後アップデート予定。']
+const dotArtSummary: string[] = ['「誰でも気軽に、どこでもドット絵を描けるWEBアプリ」が目標。', 'スマホでもPCでも描きやすいよう工夫。', '今後アップデート予定。']
 const dotArtLinks: Link[] = [
     {
         text: 'github',
@@ -27,9 +27,10 @@ const hukushimaLinks: Link[] = [
 <template>
     <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
         <div class="object-center w-4/5 overflow-x-scroll mx-auto">
+            <h1 class="text-gray-900 font-medium text-lg">作ったもの</h1>
             <div class="flex p-0">
-                <portfolio-card :image-path="useRequiredUrl('dotArt')" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
-                <portfolio-card :image-path="useRequiredUrl('fukushimaTyping')" :title="'福島タイピング'" :summarys="hukushimatSummary" :links="hukushimaLinks"></portfolio-card>
+                <portfolioCard :image-path="useRequiredUrl('dotArt')" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolioCard>
+                <portfolioCard :image-path="useRequiredUrl('fukushimaTyping')" :title="'福島タイピング'" :summarys="hukushimatSummary" :links="hukushimaLinks"></portfolioCard>
             </div>
         </div>
     </div>
