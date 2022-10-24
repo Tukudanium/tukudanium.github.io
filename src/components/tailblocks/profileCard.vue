@@ -1,3 +1,12 @@
+<script lang="ts" setup>
+const props = defineProps({
+    iconImagePath: {
+        type: String,
+        default: '',
+    },
+})
+</script>
+
 <template>
     <div class="w-80 my-6 bg-gray-300 shadow rounded border border-transparent hover:border-blue-500">
         <div class="h-60 w-full checker-bg items-center justify-center p-4 text-blue-500">
@@ -15,20 +24,5 @@
         </div>
     </div>
 </template>
-
-<script lang="ts">
-export default {
-    name: 'ProfileCard',
-    props: {
-        iconImagePath: {
-            type: String,
-            default: '',
-        },
-    },
-    setup() {
-        return {}
-    },
-}
-</script>
 
 <style scoped></style>

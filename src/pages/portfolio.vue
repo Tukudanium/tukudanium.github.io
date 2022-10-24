@@ -1,58 +1,38 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+import portfolioCard from '../components/tailblocks/portfolioCard.vue'
+import { Link } from '../types/link'
+import { useRequiredUrl } from '../composable/useRequiredUrl'
+
+const dotArtSummary: string[] = ['「誰でも気軽に、どこでもドット絵を描けるWEBアプリ」が目標。', '今後アップデート予定。']
+const dotArtLinks: Link[] = [
+    {
+        text: 'github',
+        url: 'https://github.com/TeamDotArt',
+    },
+    {
+        text: '公開ページ',
+        url: 'https://dotart.riml.work/',
+    },
+]
+const hukushimatSummary: string[] = ['学内ハッカソン最優秀賞・企業賞受賞。', '「地域活性」というテーマに対し利用動機としてタイピングアプリを提供し、終了後に出てきた観光地等の単語の情報（公式サイトなど）を一覧表示することで気になる情報へのアクセスを簡易化しました。']
+const hukushimaLinks: Link[] = [
+    {
+        text: 'github(現在プライベート設定)',
+        url: ' https://github.com/RimlTempest/chiikikassei',
+    },
+]
+</script>
+
 <template>
     <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
-        <div>
-            <portfolio-card :image-path="requiredUrl('dotArt')" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
+        <div class="object-center w-4/5 overflow-x-scroll mx-auto">
+            <div class="flex p-0">
+                <portfolio-card :image-path="useRequiredUrl('dotArt')" :title="'DotArt'" :summarys="dotArtSummary" :links="dotArtLinks"></portfolio-card>
+                <portfolio-card :image-path="useRequiredUrl('fukushimaTyping')" :title="'福島タイピング'" :summarys="hukushimatSummary" :links="hukushimaLinks"></portfolio-card>
+            </div>
         </div>
     </div>
 </template>
 
-<script lang="ts">
-import { ref } from 'vue'
-import portfolioCard from '../components/tailblocks/portfolioCard.vue'
-import { Link } from '../types/link'
-export default {
-    name: 'PortfolioPage',
-    components: { portfolioCard },
-    setup() {
-        const msg = ref('hello')
-
-        const changeMsg = () => {
-            msg.value = 'world'
-        }
-        const dotArtSummary: string[] = ['「PCでもスマホでもタブレットでも、好きな時に気軽にドット絵を描けるWEBアプリ」が目標。', '今後アップデート予定。']
-        const dotArtLinks: Link[] = [
-            {
-                text: 'github',
-                url: 'https://github.com/TeamDotArt',
-            },
-            {
-                text: '公開ページ',
-                url: 'https://dotart.riml.work/',
-            },
-        ]
-        const requiredUrl = (fileName: string): string => {
-            return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
-        }
-        return {
-            msg,
-            dotArtSummary,
-            dotArtLinks,
-            changeMsg,
-            requiredUrl,
-        }
-    },
-}
-</script>
-
-<style scoped>
-.delScroll {
-    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
-    -ms-overflow-style: none;
-    /*Firefoxへの対応*/
-    scrollbar-width: none;
-}
-/*Google Chrome、Safariへの対応*/
-.delScroll::-webkit-scrollbar {
-    display: none;
-}
-</style>
+<style scoped></style>

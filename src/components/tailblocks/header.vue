@@ -1,6 +1,7 @@
+<script lang="ts" setup></script>
 <template>
     <header class="body-font bg-gray-800 h-16 w-full fixed">
-        <div class="flex flex-wrap h-16 px-5 flex-col flex-row items-center">
+        <div class="flex flex-wrap h-16 px-5 flex-row items-center">
             <nav class="ml-auto mr-auto flex flex-wrap items-center text-base justify-center">
                 <router-link class="mr-5 text-gray-200 hover:text-pink-300 linkItem" to="/">トップページ</router-link>
                 <router-link class="mr-5 text-gray-200 hover:text-pink-300 linkItem" to="/profile">自己紹介</router-link>
@@ -10,15 +11,6 @@
         </div>
     </header>
 </template>
-
-<script lang="ts">
-export default {
-    name: 'TailblocksHeader',
-    setup() {
-        return {}
-    },
-}
-</script>
 
 <style scoped>
 .name-rogo {

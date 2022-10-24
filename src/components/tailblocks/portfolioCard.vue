@@ -1,12 +1,34 @@
+<script lang="ts" setup>
+import { Link } from '../../types/link'
+const props = defineProps({
+    imagePath: {
+        type: String,
+        default: '',
+    },
+    title: {
+        type: String,
+        default: '',
+    },
+    summarys: {
+        type: Array as () => string[],
+        default: () => [],
+    },
+    links: {
+        type: Array as () => Link[],
+        default: () => [],
+    },
+})
+</script>
+
 <template>
-    <div class="w-96 h-96 my-6 bg-gray-300 shadow rounded border border-transparent hover:border-blue-500">
+    <div class="w-96 h-96 my-6 mx-4 bg-gray-300 shadow rounded border border-transparent">
         <div class="h-2/5 flex">
-            <div class="h-full w-2/5 checker-bg items-center justify-center p-5 text-blue-500">
-                <div class="checker-bg flex items-center justify-center rounded-lg">
+            <div class="h-full w-36 checker-bg items-center justify-center p-5 text-blue-500">
+                <div class="w-28 h-28 checker-bg flex items-center justify-center rounded-lg">
                     <img class="w-28 h-28 bg-gray-100 bg-cover bg-center rounded-lg" :src="imagePath" />
                 </div>
             </div>
-            <div class="py-5 pr-5 w-3/5">
+            <div class="py-5 pr-5 w-56">
                 <div class="text-left">
                     <h1 class="text-gray-900 font-medium text-lg">◆{{ title }}</h1>
                 </div>
@@ -26,33 +48,5 @@
         </div>
     </div>
 </template>
-
-<script lang="ts">
-import { Link } from '../../types/link'
-export default {
-    name: 'PortfolioCard',
-    props: {
-        imagePath: {
-            type: String,
-            default: '',
-        },
-        title: {
-            type: String,
-            default: '',
-        },
-        summarys: {
-            type: Array as () => string[],
-            default: () => [],
-        },
-        links: {
-            type: Array as () => Link[],
-            default: () => [],
-        },
-    },
-    setup(props: any) {
-        return {}
-    },
-}
-</script>
 
 <style scoped></style>
