@@ -1,14 +1,15 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import pageLayout from '../components/atomic/pageLayout.vue'
 
 const props = defineProps({})
 </script>
 <template>
-    <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
+    <pageLayout>
         <div class="h-800">
             <img src="../assets/image/logo.png" class="glitch animation" />
         </div>
-    </div>
+    </pageLayout>
 </template>
 
 <style scoped>

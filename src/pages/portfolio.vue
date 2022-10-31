@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import pageLayout from '../components/atomic/pageLayout.vue'
 import portfolioCard from '../components/tailblocks/portfolioCard.vue'
 import { Link } from '../types/link'
 import { useRequiredUrl } from '../composable/useRequiredUrl'
@@ -25,7 +26,7 @@ const hukushimaLinks: Link[] = [
 </script>
 
 <template>
-    <div class="justify-center items-center mt-16 grid w-full h-full overflow-y-scroll delScroll">
+    <pageLayout>
         <div class="object-center w-4/5 mx-auto">
             <h1 class="text-gray-900 font-medium text-lg">作ったもの</h1>
             <div class="flex m-2 p-0 overflow-x-scroll">
@@ -33,7 +34,7 @@ const hukushimaLinks: Link[] = [
                 <portfolioCard :image-path="useRequiredUrl('fukushimaTyping')" :title="'福島タイピング'" :summarys="hukushimatSummary" :links="hukushimaLinks"></portfolioCard>
             </div>
         </div>
-    </div>
+    </pageLayout>
 </template>
 
 <style scoped></style>

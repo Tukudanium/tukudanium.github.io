@@ -4,7 +4,7 @@ import tailblocksHeader from './components/tailblocks/header.vue'
 </script>
 
 <template>
-    <div class="h-full flex flex-col">
+    <div class="h-full w-full flex flex-col">
         <tailblocks-header />
         <transition name="router-transition" enter-active-class="animated zoomIn">
             <router-view />
