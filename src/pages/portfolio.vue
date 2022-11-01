@@ -42,7 +42,7 @@ const hukushimaPortfolioItem: PortfolioItem = {
 
 <template>
     <pageLayout>
-        <div class="object-center w-4/5 mx-auto">
+        <div class="object-center w-11/12 mx-auto sm:w-4/5">
             <h1 class="text-gray-900 font-medium text-lg">作ったもの</h1>
             <div class="flex m-2 p-0 overflow-x-scroll">
                 <portfolioCard :item="dotArtPortfolioItem"></portfolioCard>
