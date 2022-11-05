@@ -10,7 +10,7 @@ import { useRequiredUrl } from '../composable/useRequiredUrl'
         <div class="h-full w-full py-10">
             <h1 class="text-gray-900 font-medium text-lg">自己紹介</h1>
             <profileCard :icon-image-path="useRequiredUrl('icon')"></profileCard>
-            <h1 class="text-transparent font-medium text-lg">こんにちは</h1>
+            <h1 class="text-transparent font-medium text-lg">（・∀・）ﾆﾔﾆﾔ</h1>
         </div>
     </pageLayout>
 </template>

@@ -53,58 +53,55 @@ const props = defineProps({
         <div class="p-4 border-t border-gray-400">
             <cardPulldown :title="'● スキル'">
                 <div class="p-2 my-2 border rounded-lg border-purple-500">
-                    <cardPulldown :title="'言語'">
-                        <div class="p-2 my-2 border rounded-lg border-blue-700">
-                            <cardPulldown :title="'javascript,typescript'">
-                                <TextLarge>制作物、業務共にWEB系が中心のため現在に至るまでメインで取り扱っています。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                        <div class="p-2 my-2 border rounded-lg border-red-600">
-                            <cardPulldown :title="'HTML'">
-                                <TextLarge>フロントエンドの業務が多いためこちらも扱うことが多いです。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                        <div class="p-2 my-2 border rounded-lg border-blue-500">
-                            <cardPulldown :title="'CSS'">
-                                <TextLarge>デザインセンスはないので苦手よりですが、業務上使わないことがないので最低限ＵＩは自身で作れるようにしています。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                    </cardPulldown>
+                    <h1 class="text-gray-900 text-left font-medium text-xl ml-2 group-hover:text-purple-700">言語</h1>
+                    <div class="p-2 my-2 border rounded-lg border-blue-700">
+                        <cardPulldown :title="'javascript,typescript'">
+                            <TextLarge>制作物、業務共にWEB系が中心のため現在に至るまでメインで取り扱っています。</TextLarge>
+                        </cardPulldown>
+                    </div>
+                    <div class="p-2 my-2 border rounded-lg border-red-600">
+                        <cardPulldown :title="'HTML'">
+                            <TextLarge>フロントエンドの業務が多いためこちらも扱うことが多いです。</TextLarge>
+                        </cardPulldown>
+                    </div>
+                    <div class="p-2 my-2 border rounded-lg border-blue-500">
+                        <cardPulldown :title="'CSS'">
+                            <TextLarge>デザインセンスはないので苦手よりですが、業務上使わないことがないので最低限ＵＩは自身で作れるようにしています。</TextLarge>
+                        </cardPulldown>
+                    </div>
                 </div>
                 <div class="p-2 my-2 border rounded-lg border-purple-500">
-                    <cardPulldown :title="'フレームワーク等'">
-                        <div class="p-2 my-2 border rounded-lg border-green-800">
-                            <cardPulldown :title="'vue.js'">
-                                <TextLarge>自主開発のWEBアプリは主にvueで作成しています。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                        <div class="p-2 my-2 border rounded-lg border-blue-400">
-                            <cardPulldown :title="'react.js'">
-                                <TextLarge>業務では主にReactを扱っています。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                        <div class="p-2 my-2 border rounded-lg border-green-600">
-                            <cardPulldown :title="'node.js'">
-                                <TextLarge>バックエンド開発はnode.jsとexpressで行うことが多いです。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                    </cardPulldown>
+                    <h1 class="text-gray-900 text-left font-medium text-xl ml-2 group-hover:text-purple-700">フレームワーク</h1>
+                    <div class="p-2 my-2 border rounded-lg border-green-800">
+                        <cardPulldown :title="'vue.js'">
+                            <TextLarge>自主開発のWEBアプリは主にvueで作成しています。</TextLarge>
+                        </cardPulldown>
+                    </div>
+                    <div class="p-2 my-2 border rounded-lg border-blue-400">
+                        <cardPulldown :title="'react.js'">
+                            <TextLarge>業務では主にReactを扱っています。</TextLarge>
+                        </cardPulldown>
+                    </div>
+                    <div class="p-2 my-2 border rounded-lg border-green-600">
+                        <cardPulldown :title="'node.js'">
+                            <TextLarge>バックエンド開発はnode.jsとexpressで行うことが多いです。</TextLarge>
+                        </cardPulldown>
+                    </div>
                 </div>
                 <div class="p-2 my-2 border rounded-lg border-purple-500">
-                    <cardPulldown :title="'その他'">
-                        <h1 class="text-gray-900 font-medium text-base text-left">現在は扱っていませんが、以前に2か月以上触れたことのある技術です。</h1>
-                        <div class="p-2 my-2 border rounded-lg border-purple-800">
-                            <cardPulldown :title="'C#'">
-                                <TextLarge>アルバイト時代にXamarinでのスマホアプリ開発に携わっていました。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                        <div class="p-2 my-2 border rounded-lg border-red-500">
-                            <cardPulldown :title="'java'">
-                                <TextLarge>専門学校二年次に行われた学内ハッカソンで使用しました。</TextLarge>
-                                <TextLarge>最優秀賞に加え、審査員長の方が急遽特別に企業賞を作ってくださり、追加の賞金までいただきました。感謝。</TextLarge>
-                            </cardPulldown>
-                        </div>
-                    </cardPulldown>
+                    <h1 class="text-gray-900 text-left font-medium text-xl ml-2 group-hover:text-purple-700">その他</h1>
+                    <h1 class="text-gray-900 font-medium text-base text-left">現在は扱っていませんが、以前に2か月以上触れたことのある技術です。</h1>
+                    <div class="p-2 my-2 border rounded-lg border-purple-800">
+                        <cardPulldown :title="'C#'">
+                            <TextLarge>アルバイト時代にXamarinでのスマホアプリ開発に携わっていました。</TextLarge>
+                        </cardPulldown>
+                    </div>
+                    <div class="p-2 my-2 border rounded-lg border-red-500">
+                        <cardPulldown :title="'java'">
+                            <TextLarge>専門学校二年次に行われた学内ハッカソンで使用しました。</TextLarge>
+                            <TextLarge>最優秀賞に加え、審査員長の方が急遽特別に企業賞を作ってくださり、追加の賞金までいただきました。感謝。</TextLarge>
+                        </cardPulldown>
+                    </div>
                 </div>
             </cardPulldown>
         </div>
