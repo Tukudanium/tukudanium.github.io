@@ -30,7 +30,7 @@ const props = defineProps({
             <cardPulldown :title="'● 趣味'">
                 <div class="p-2 my-2 border rounded-lg border-purple-500">
                     <cardPulldown :title="'・ゲーム'">
-                        <TextLarge>・任天堂ハードのゲームのほか、STEAMセールでゲームを買いあさったりする。</TextLarge>
+                        <TextLarge>・ポケモン等の任天堂ハードのゲームのほか、STEAMセールでゲームを買いあさったりする。</TextLarge>
                         <TextLarge>・STEAMでの所持ゲームは現在43個。</TextLarge>
                         <TextLarge>・好きなジャンルはローグライク、ローグライト。このジャンルではThe Binding of Isaacが一番好き。</TextLarge>
                     </cardPulldown>
@@ -46,6 +46,30 @@ const props = defineProps({
                     <cardPulldown :title="'・読書'">
                         <TextLarge>・剣客ものの時代小説が好き。</TextLarge>
                         <TextLarge>・一番好きな本は藤沢周平著「よろずや平四郎活人剣」</TextLarge>
+                    </cardPulldown>
+                </div>
+            </cardPulldown>
+        </div>
+        <div class="p-4 border-t border-gray-400">
+            <cardPulldown :title="'● 資格・実績'">
+                <div class="p-2 my-2 border rounded-lg border-purple-500">
+                    <cardPulldown :title="'・応用情報技術者'">
+                        <TextLarge>・一回全く勉強しなかったら落ちた。</TextLarge>
+                        <TextLarge>・次回は反省して、5日前から午前問題を一日3時間頑張った。受かった。</TextLarge>
+                    </cardPulldown>
+                </div>
+                <div class="p-2 my-2 border rounded-lg border-purple-500">
+                    <cardPulldown :title="'・校内ハッカソン最優秀賞、企業賞'">
+                        <TextLarge>・専門2年時に実施。テーマは地域活性。</TextLarge>
+                        <TextLarge>・福島県の観光関連の文字を使ったタイピングアプリを作成した。</TextLarge>
+                        <TextLarge>・タイピングゲーム部分のプログラミング、全体的なアプリのデザイン等を担当。</TextLarge>
+                    </cardPulldown>
+                </div>
+                <div class="p-2 my-2 border rounded-lg border-purple-500">
+                    <cardPulldown :title="'・Connect 2022 in Koriyama, with UDC 郡山市長賞'">
+                        <TextLarge>・新卒一年目に実施。テーマは「郡山の鯉を知ろう、食べよう、楽しもう」</TextLarge>
+                        <TextLarge>・郡山市長賞は事実上の一位とのこと。</TextLarge>
+                        <TextLarge>・ハッカソンメンバーが新卒からほぼ無作為に選出されたメンバーで開発ができるのが自分のみだったため、カメラアプリというアイデア以外はユーザーのモチベーション考察、企画、開発を９割自分が行った。</TextLarge>
                     </cardPulldown>
                 </div>
             </cardPulldown>
@@ -99,7 +123,12 @@ const props = defineProps({
                     <div class="p-2 my-2 border rounded-lg border-red-500">
                         <cardPulldown :title="'java'">
                             <TextLarge>専門学校二年次に行われた学内ハッカソンで使用しました。</TextLarge>
-                            <TextLarge>最優秀賞に加え、審査員長の方が急遽特別に企業賞を作ってくださり、追加の賞金までいただきました。感謝。</TextLarge>
+                        </cardPulldown>
+                    </div>
+                    <div class="p-2 my-2 border rounded-lg border-blue-400">
+                        <cardPulldown :title="'python'">
+                            <TextLarge>多少自主学習済み。Connect 2022 in Koriyamaハッカソンで使用。</TextLarge>
+                            <TextLarge>flaskとDjangoを触れています。</TextLarge>
                         </cardPulldown>
                     </div>
                 </div>
