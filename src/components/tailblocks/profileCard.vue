@@ -69,7 +69,7 @@ const props = defineProps({
                     <cardPulldown :title="'・Connect 2022 in Koriyama, with UDC 郡山市長賞'">
                         <TextLarge>・新卒一年目に実施。テーマは「郡山の鯉を知ろう、食べよう、楽しもう」</TextLarge>
                         <TextLarge>・郡山市長賞は事実上の一位とのこと。</TextLarge>
-                        <TextLarge>・ハッカソンメンバーが新卒からほぼ無作為に選出されたメンバーで開発ができるのが自分のみだったため、カメラアプリというアイデア以外はユーザーのモチベーション考察、企画、開発を９割自分が行った。</TextLarge>
+                        <TextLarge>・全員新卒からほぼ無作為に選出されたメンバーで開発ができるのが自分のみだったため、カメラアプリというアイデア以外はユーザーのモチベーション考察、企画、開発を９割自分が行った。</TextLarge>
                     </cardPulldown>
                 </div>
             </cardPulldown>
