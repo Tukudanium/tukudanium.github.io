@@ -29,12 +29,42 @@ const dotArtPortfolioItem: PortfolioItem = {
 const hukushimaPortfolioItem: PortfolioItem = {
     imagePath: useRequiredUrl('fukushimaTyping'),
     title: '福島タイピング',
-    summarys: ['学内ハッカソン最優秀賞・企業賞受賞。', '「地域活性」というテーマに対し利用動機としてタイピングアプリを提供し、終了後に出てきた観光地等の単語の情報（公式サイトなど）を一覧表示することで気になる情報へのアクセスを簡易化しました。'],
+    summarys: [
+        '学内ハッカソン最優秀賞・企業賞受賞。',
+        '「地域活性」というテーマに対し利用動機としてタイピングアプリを提供し、終了後に出てきた観光地等の単語の情報（公式サイトなど）を一覧表示することで気になる情報へのアクセスを簡易化しました。',
+    ],
     techs: [{ text: 'java', color: 'bg-red-500' }],
     links: [
         {
             text: 'github(現在プライベート設定)',
-            url: ' https://github.com/RimlTempest/chiikikassei',
+            url: 'https://github.com/RimlTempest/chiikikassei',
+        },
+    ],
+}
+const kirinukikunPortfolioItem: PortfolioItem = {
+    imagePath: useRequiredUrl('noImage'),
+    title: 'vue-kirinukikun',
+    summarys: [
+        'vue3で動作する、画像切り抜きコンポーネントライブラリ。',
+        '自作npmパッケージを作ってみたかったので、viteのライブラリモードでコンポーネントをライブラリにしてみた。',
+    ],
+    techs: [
+        { text: 'typescript', color: 'bg-blue-500' },
+        { text: 'vue.js', color: 'bg-green-400' },
+        { text: 'vite', color: 'bg-purple-400' },
+    ],
+    links: [
+        {
+            text: 'github',
+            url: 'https://github.com/Tukudanium/vue-kirinukikun',
+        },
+        {
+            text: 'npm',
+            url: 'https://www.npmjs.com/package/vue-kirinukikun',
+        },
+        {
+            text: 'デモ(codesandbox)',
+            url: 'https://oru5oj.csb.app/',
         },
     ],
 }
@@ -45,8 +75,9 @@ const hukushimaPortfolioItem: PortfolioItem = {
         <div class="object-center w-11/12 mx-auto sm:w-4/5">
             <h1 class="text-gray-900 font-medium text-lg">作ったもの</h1>
             <div class="flex m-2 p-0 overflow-x-scroll">
-                <portfolioCard :item="dotArtPortfolioItem"></portfolioCard>
-                <portfolioCard :item="hukushimaPortfolioItem"></portfolioCard>
+                <portfolioCard :item="dotArtPortfolioItem" />
+                <portfolioCard :item="hukushimaPortfolioItem" />
+                <portfolioCard :item="kirinukikunPortfolioItem" />
             </div>
         </div>
     </pageLayout>

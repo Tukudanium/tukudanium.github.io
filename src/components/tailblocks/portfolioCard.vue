@@ -27,12 +27,12 @@ const props = defineProps<Props>()
             </div>
         </div>
         <div class="h-3/5">
-            <div class="h-3/4 flex flex-col justify-center text-left p-5 pt-2 border-t border-gray-400">
+            <div class="h-2/3 flex flex-col justify-center text-left p-5 border-t border-gray-400">
                 <div v-for="summary in props.item.summarys" :key="summary">
                     <h1 class="text-gray-900 font-medium text-base">・{{ summary }}</h1>
                 </div>
             </div>
-            <div class="h-1/4 text-left p-5 py-1 border-t border-gray-400">
+            <div class="h-1/3 text-left p-5 py-0.5 border-t border-gray-400">
                 <div v-for="link in props.item.links" :key="link.text">
                     <a :href="link.url" target="_blank" class="text-indigo-600 text-sm no-underline hover:underline ...">{{ link.text }}</a>
                 </div>
