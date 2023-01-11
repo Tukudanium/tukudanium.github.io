@@ -2,14 +2,18 @@
 import { ref } from 'vue'
 import pageLayout from '../components/atomic/pageLayout.vue'
 import portfolioCard from '../components/tailblocks/portfolioCard.vue'
-import { Link } from '../types/link'
 import { PortfolioItem } from '../types/portfolioItem'
 import { useRequiredUrl } from '../composable/useRequiredUrl'
 
 const dotArtPortfolioItem: PortfolioItem = {
     imagePath: useRequiredUrl('dotArt'),
     title: 'DotArt',
-    summarys: ['「誰でも気軽に、どこでもドット絵を描けるWEBアプリ」が目標。', 'スマホでもPCでも描きやすいよう工夫。', '今後アップデート予定。'],
+    summarys: [
+        '「誰でも気軽に、どこでもドット絵を描けるWEBアプリ」が目標。',
+        'スマホでもPCでも描きやすいよう工夫。',
+        '自作faviconがお気に入り。',
+        '今後アップデート予定だが、vue3の破壊的変更が立ちふさがっている。',
+    ],
     techs: [
         { text: 'typescript', color: 'bg-blue-500' },
         { text: 'vue.js', color: 'bg-green-400' },
@@ -68,6 +72,44 @@ const kirinukikunPortfolioItem: PortfolioItem = {
         },
     ],
 }
+const koiCameraPortfolioItem: PortfolioItem = {
+    imagePath: useRequiredUrl('noImage'),
+    title: '鯉カメラ',
+    summarys: [
+        'Connect 2022 in Koriyama, with UDC にて郡山市長賞を受賞した。',
+        '画像の顔の位置に鯉の顔の画像を重ねて撮影できる顔認識アプリ。',
+        '実はカメラ画像取得をpythonで行っているので、デプロイしても動かない…',
+    ],
+    techs: [
+        { text: 'python', color: 'bg-yellow-300' },
+        { text: 'javascript', color: 'bg-yellow-400' },
+    ],
+    links: [
+        {
+            text: 'github',
+            url: 'https://github.com/Tukudanium/koi_camera',
+        },
+    ],
+}
+const viteReactTsTemplatePortfolioItem: PortfolioItem = {
+    imagePath: useRequiredUrl('noImage'),
+    title: 'vite-react-ts-template',
+    summarys: [
+        'Vite & React18 & ReactRouter & TypeScript のテンプレート。',
+        'React18の新機能であるTransitionと、SuspenseのSSR対応を見て自主制作でも使ってみたくなったのでとりあえず作成。',
+    ],
+    techs: [
+        { text: 'typescript', color: 'bg-blue-500' },
+        { text: 'react', color: 'bg-blue-400' },
+        { text: 'vite', color: 'bg-purple-400' },
+    ],
+    links: [
+        {
+            text: 'github',
+            url: 'https://github.com/Tukudanium/vite-react-ts-template',
+        },
+    ],
+}
 </script>
 
 <template>
@@ -78,6 +120,8 @@ const kirinukikunPortfolioItem: PortfolioItem = {
                 <portfolioCard :item="dotArtPortfolioItem" />
                 <portfolioCard :item="hukushimaPortfolioItem" />
                 <portfolioCard :item="kirinukikunPortfolioItem" />
+                <portfolioCard :item="koiCameraPortfolioItem" />
+                <portfolioCard :item="viteReactTsTemplatePortfolioItem" />
             </div>
         </div>
     </pageLayout>
