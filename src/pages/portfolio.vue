@@ -76,18 +76,17 @@ const koiCameraPortfolioItem: PortfolioItem = {
     imagePath: useRequiredUrl('noImage'),
     title: '鯉カメラ',
     summarys: [
-        'Connect 2022 in Koriyama, with UDC にて郡山市長賞を受賞した。',
-        '画像の顔の位置に鯉の顔の画像を重ねて撮影できる顔認識アプリ。',
-        '実はカメラ画像取得をpythonで行っているので、デプロイしても動かない…',
+        'Connect 2022 in Koriyama, with UDC にて郡山市長賞を受賞した、画像の顔の位置に鯉の顔の画像を重ねて撮影できる顔認識アプリの顔認識&差し替え部分をFastAPIでリプレースしたもの。',
+        'snowのような顔変換の面白味でユーザーに利用動機を作ろうと試みた。',
     ],
     techs: [
         { text: 'python', color: 'bg-yellow-300' },
-        { text: 'javascript', color: 'bg-yellow-400' },
+        { text: 'FastAPI', color: 'bg-green-300' },
     ],
     links: [
         {
             text: 'github',
-            url: 'https://github.com/Tukudanium/koi_camera',
+            url: 'https://github.com/Tukudanium/koi_camera_fastapi',
         },
     ],
 }
