@@ -24,7 +24,7 @@ Vue 3 と Tailwind CSS の学習、またViteを利用してみるという目�
 \
 vite.config
 
-```bash
+```ts
 export default defineConfig({
     base: '/（リポジトリの名前）/', //追記
     build: {
@@ -37,7 +37,7 @@ export default defineConfig({
 
 router/index.ts
 
-```bash
+```ts
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL), //追記
   routes,
@@ -60,7 +60,7 @@ const router = createRouter({
 普通require(imagePath)でモジュールとして読み込めば使えるが、Viteはブラウザのみで実行されるのでNode.js等向けのrequireは定義されていない。
 なので
 
-```bash
+```ts
 const requiredUrl = (fileName: string): string => {
 return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
 }
@@ -69,7 +69,7 @@ return new URL(`../assets/image/${fileName}.png`, import.meta.url).href
 
 こうして
 
-```bash
+```html
 <img :src="requiredUrl(fileName)" />
 ```
 
