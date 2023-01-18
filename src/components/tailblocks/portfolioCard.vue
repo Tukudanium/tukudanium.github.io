@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Link } from '../../types/link'
 import { PortfolioItem } from '../../types/portfolioItem'
 interface Props {
     item: PortfolioItem
@@ -20,7 +19,12 @@ const props = defineProps<Props>()
                     <h1 class="text-gray-900 font-medium text-lg">◆{{ props.item.title }}</h1>
                 </div>
                 <div class="text-left flex">
-                    <div v-for="tech in props.item.techs" :key="tech.text" class="rounded-full px-2 pb-1 m-1" :class="tech.color">
+                    <div
+                        v-for="tech in props.item.techs"
+                        :key="tech.text"
+                        class="rounded-full px-2 pb-1 m-1"
+                        :class="tech.color"
+                    >
                         <h1 class="text-gray-900 font-medium text-sm font-sans">{{ tech.text }}</h1>
                     </div>
                 </div>
@@ -34,7 +38,12 @@ const props = defineProps<Props>()
             </div>
             <div class="h-1/3 text-left p-5 py-0.5 border-t border-gray-400">
                 <div v-for="link in props.item.links" :key="link.text">
-                    <a :href="link.url" target="_blank" class="text-indigo-600 text-sm no-underline hover:underline ...">{{ link.text }}</a>
+                    <a
+                        :href="link.url"
+                        target="_blank"
+                        class="text-indigo-600 text-sm no-underline hover:underline ..."
+                        >{{ link.text }}</a
+                    >
                 </div>
             </div>
         </div>
