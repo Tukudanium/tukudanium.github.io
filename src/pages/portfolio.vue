@@ -76,7 +76,7 @@ const koiCameraPortfolioItem: PortfolioItem = {
     imagePath: useRequiredUrl('esa_agenaide'),
     title: '鯉カメラ',
     summarys: [
-        'Connect 2022 in Koriyama, with UDC にて郡山市長賞を受賞した顔認識＆差し替えアプリを、APIとしてFastAPIでリプレースしたもの。',
+        'Connect 2022 in Koriyama, with UDC にて郡山市長賞を受賞した、画像の顔の位置に鯉の顔の画像を重ねて撮影できる顔認識アプリの顔認識&差し替え部分をFastAPIでリプレースしたもの。',
         'snowのような顔変換の面白味でユーザーに利用動機を作ろうと試みた。',
     ],
     techs: [
