@@ -109,6 +109,29 @@ const viteReactTsTemplatePortfolioItem: PortfolioItem = {
         },
     ],
 }
+const jinroMemoPortfolioItem: PortfolioItem = {
+    imagePath: useRequiredUrl('noImage'),
+    title: '人狼メモ',
+    summarys: [
+        'Vite & React18 & TypeScriptで作成した、人狼ゲームのメモ。',
+        'Discodeで参加させていただいた人狼系ゲームで各プレイヤーの自己申告がまるで覚えられなかったので、需要がありそうだなと思い作成。',
+    ],
+    techs: [
+        { text: 'typescript', color: 'bg-blue-500' },
+        { text: 'react', color: 'bg-blue-400' },
+        { text: 'vite', color: 'bg-purple-400' },
+    ],
+    links: [
+        {
+            text: 'github',
+            url: 'https://github.com/Tukudanium/jinro-memo',
+        },
+        {
+            text: '公開ページ',
+            url: 'https://tukudanium.github.io/jinro-memo/',
+        },
+    ],
+}
 </script>
 
 <template>
@@ -117,6 +140,7 @@ const viteReactTsTemplatePortfolioItem: PortfolioItem = {
             <h1 class="text-gray-900 font-medium text-lg">作ったもの</h1>
             <div class="flex m-2 p-0 overflow-x-scroll">
                 <portfolioCard :item="dotArtPortfolioItem" />
+                <portfolioCard :item="jinroMemoPortfolioItem" />
                 <portfolioCard :item="hukushimaPortfolioItem" />
                 <portfolioCard :item="koiCameraPortfolioItem" />
                 <portfolioCard :item="kirinukikunPortfolioItem" />
