@@ -5,7 +5,7 @@
 Vue 3 + TypeScript + Vite + Tailwind CSS で作成したポートフォリオサイトです。
 Vue 3 と Tailwind CSS の学習、またViteを利用してみるという目的も兼ねてます。
 
-実行方法
+### 実行方法
 下記コマンドの実行でデバッグが開始されます。
 ```bash
   yarn install
