@@ -5,6 +5,19 @@
 Vue 3 + TypeScript + Vite + Tailwind CSS で作成したポートフォリオサイトです。
 Vue 3 と Tailwind CSS の学習、またViteを利用してみるという目的も兼ねてます。
 
+実行方法
+下記コマンドの実行でデバッグが開始されます。
+```bash
+  yarn install
+  yarn dev
+```
+
+## 備忘録
+
+詰まったところ描いてく。
+\
+**環境構築**
+\
 ```bash
   yarn create vite [reponame] --template vue-ts
   yarn add -D eslint eslint-plugin-vue @vue/eslint-config-typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
@@ -15,10 +28,6 @@ Vue 3 と Tailwind CSS の学習、またViteを利用してみるという目�
   yarn add -D tailwindcss
   npx tailwindcss init
 ```
-
-## 備忘録
-
-詰まったところ描いてく。
 \
 **vite&vue routerのGithubPagesへのデプロイ方法**
 \
